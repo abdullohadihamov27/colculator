@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My website</title>
+    <link rel="stylesheet" href="./vazifa.css">
+
+</head>
+<body>
+    <!-- <header id="id1">Hi world</header> -->
+    <aside>
+          <img src="Screenshot_19.png" alt="">
+    </aside>
+   
+    <h1 id="id1">Registration </h1>
+    <form>
+        
+       <section  id="behi">
+        <label for="fulname" id="fullNameLabelId">Full name</label> <br>
+        <input type="text" name="fullname", id="fullNameInputId" placeholder="Enter Your fullname">  <br>
+
+        <label for="Email" id="EmailLabelId">Email</label> <br>
+        <input type="email" name="Email", id="EmailInputId" placeholder="Enter Your Email"> <br>
+
+        <label for="Password" id="PasswordlabelId">Password</label><br>
+        <input type="password" name="Password", id="PasswordinputId" placeholder="Enter Your Password"><br>
+        </section>
+
+      
+      <section id="olma">
+        <label for="Username" id="UsernameLabelId">Username</label> <br>
+        <input type="text" name="Username", id="UsernameInputId" placeholder="Enter Your Username">  <br>
+
+        <label for="Phone Number" id="PhoneNumberLabelId">Phone Number</label> <br>
+        <input type="number" name="Phone Number", id="PhoneNumberInputId" placeholder="Enter Your Number"> <br>
+
+        <label for="Confirm Password" id="ConfirmPasswordLabelId">Confirm Password</label><br>
+        <input type="password" name="Confirm Password", id="ConfirmPasswordInputId" placeholder="Confirm Your Password"><br>
+
+        
+<footer id="take">
+    
+    <label for="Gender" >Gender</label><br> 
+
+    <label for="Male" id="MaleLabelId">Male</label>
+    <input type="radio" name="Male", id="MaleInputId">
+
+    <label for="Female" id="FemaleLabelId">Female</label>
+    <input type="radio" name="Female", id="FemaleInputId">
+
+    <label for="preper not to say" id="PreperNotToSayLabelId">preper not to say</label>
+    <input  type="radio" name="preper not to say", id="PreperNotToSayInputId">
+   </footer>
+      </section>
+        
+</form>
+
+  
+   <button type="button" onclick="checkInputs()">Registration</button>
+
+   
+   <script>
+    function checkInputs(){
+        const fullNameLabel = document.getElementById('fullNameLabelId')
+        const fullnameInput = document.getElementById('fullNameInputId').value
+
+        const EmalLabel = document.getElementById('EmailLabelId')
+        const EmailInput = document.getElementById('EmailInputId').value
+
+        const PasswordLabel = document.getElementById('PasswordlabelId')
+        const PasswordInput = document.getElementById('PasswordinputId').value
+
+        const usernameLabel = document.getElementById('UsernameLabelId')
+        const userNameInput = document.getElementById('UsernameInputId').value
+
+        const PhoneNumberLabel = document.getElementById('PhoneNumberLabelId')
+        const PhoneNumberInput = document.getElementById('PhoneNumberInputId').value
+
+        const ConfirmPasswordLabel = document.getElementById('ConfirmPasswordLabelId')
+        const ConfirmPasswordInput = document.getElementById('ConfirmPasswordInputId').value
+
+        const MaleLabel = document.getElementById('MaleLabelId')
+        const MaleInput = document.getElementById('MaleInputId').value
+
+        const FemaleLabel = document.getElementById('FemaleLabelId')
+        const FemaleInput = document.getElementById('FemaleInputId').value
+
+        const PreperNotToSayLabel = document.getElementById('PreperNotToSayLabelId')
+        const PreperNotToSayInput = document.getElementById('PreperNotToSayInputId').value
+
+
+        let alertText
+
+        if(!fullnameInput){
+            fullNameLabel.style.color = "red"
+            alertText = "full name to'ldirilmagan"
+        }
+        else if(!EmailInput){
+            EmalLabel.style.color = "red"
+            alertText = "Email kiritilmagan"
+        }
+        else if(!PasswordInput){
+            PasswordLabel.style.color = "red"
+            alertText = "Password kiritilmagan"
+        }
+        else if(!userNameInput){
+            usernameLabel.style.color = "red"
+            alertText = "UserName kiritilmagan"
+        }
+        else if(!PhoneNumberInput){
+            PhoneNumberLabel.style.color = "red"
+            alertText = "Phone Number kiritilmagan"
+        }
+        else if(!ConfirmPasswordInput){
+            ConfirmPasswordLabel.style.color = "red"
+            alertText = "Confirm password kiritilmagan"
+        }
+        else if(!MaleInput){
+            MaleLabel.style.color = "red"
+            alertText = "Gender kiritilmagan"
+        }
+        else if(!FemaleInput){
+            FemaleLabel.style.color = "red"
+            alertText = "Gender kiritilmagan"
+        }
+        else if(!PreperNotToSayInput){
+            PreperNotToSayLabel.style.color = "red"     
+            alertText = "Gender kiritilmagan"
+        }
+        else if(PasswordInput == ConfirmPasswordInput){
+            PasswordInput.style.color= "red" 
+            alertText = "password va confirm password teng emas"
+        }
+
+        if(alertText){
+            alert(alertText)
+        }else{
+            alert("Siz muofaqqiyatli royxatdan o'tdingiz.")
+            location.reload();
+        }
+    }
+</script>
+
+</body>
+</html>
