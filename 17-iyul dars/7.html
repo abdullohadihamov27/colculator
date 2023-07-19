@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScripta pop-up boxlar </h2>
+    <p id="confirm"></p>
+    <p id="prompt"></p>
+
+    <button onclick="ShowAlert()">Alert</button>
+    <button onclick="SHowConfirmation()">Confirmation</button>
+    <button onclick="ShowPrompt()">Prompt</button>
+
+    <script>
+        function ShowAlert(){
+            alert("Diqqat! Bu alert box")
+        }
+        function SHowConfirmation(){
+         let Text = '';
+         if(confirm('shartlarga rozimisz ')){
+            Text =  "ha";
+         }
+         else {
+            Text = "Yo'\q"
+         }
+         document.getElementById("confirm").innerHTML = Text;
+        }
+        function ShowPrompt(){
+            let Text = '';
+            let username = prompt("Iltimos ozinggizni tanishtiring ", "Ismingiz")
+            if(username === null || username === ''){
+                Text = "Ismingizni kiritmadiz, afsus,";
+            }else {
+                Text = "Assalomu alaykun "+ username + " qandaysz"
+            }
+            document.getElementById("prompt").innerHTML = Text
+        }
+    </script>
+</body>
+</html>

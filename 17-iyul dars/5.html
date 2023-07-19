@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+</head>
+<body>
+    <p>Documentga yangi tugma qoshilishi uchun quyidagi tugmani bosing.</p>
+
+    <button onclick="addNewButtun()">Yangi tugma</button>
+    <button onclick="addNewParagraph()">Yangi Paragraph</button>
+    <button onclick="removeParagraph()">Paragraphni ochirish</button>
+
+    <script>
+        function addNewButtun(){
+            let btn = document.createElement("button")
+            btn.innerHTML= "Yangi tugma"
+            btn.onclick= function(){addNewButtun();};
+            document.body.appendChild(btn)
+        }
+        function addNewParagraph(){
+            let Paragraph = document.createElement("p");
+            Paragraph.innerHTML = "Bu yangi Paragraph";
+            document.body.appendChild(Paragraph);
+        }
+        function removeParagraph(){
+            document.body.removeChild(document.getElementsByTagName("p")[1])
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addNewButtun()">Sinf Royhati</button>
+    <p>salom dunyo</p>
+</body>
+</html>
+
+<script>
+   
+    function addNewButtun(){
+
+        const oquvchi = [{name:"Bek", age:24},
+    {ism:"sarvar",age:"23"},
+    {ism:"shahlo",age:"41"},
+    {ism:"sevara",age:"13"},
+    {ism:"bahrom",age:"42"},
+    {ism:"asliddin",age:"12"},
+    {ism:"munisa",age:"65"},
+    {ism:"muhammadamin",age:"17"},
+    {ism:"rayhon",age:"22"},
+    {ism:"asror",age:"11"},
+    {ism:"zahro",age:"44"},
+    {ism:"abdulloh",age:"47"},
+    {ism:"zebo",age:"12"},
+    {ism:"bekzod",age:"58"},
+    {ism:"Azizbek",age:"18"},
+    {ism:"laylo",age:"19"},
+    {ism:"muhayo",age:"52"},
+    {ism:"muhammadqodir",age:"15"},
+    {ism:"ozoda",age:"54"},
+    {ism:"asliddin",age:"57"},
+    {ism:"shohjahon",age:"13"},
+]
+        for (let i = 0; i < oquvchi.length; i++) {
+    const element = oquvchi[i];
+    const oquvchi =`${element.name} ${element.age} ${element.surname} `
+
+
+        let text = document.createElement("p");
+        text.innerHTML = "oquvchi";
+        document.body.appendChild(text);
+    }
+    
+}
+
+</script>

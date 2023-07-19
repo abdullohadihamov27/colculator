@@ -1,0 +1,31 @@
+</head>
+<body>
+    <p>Ichimliklar ro'yhati</p>
+    <ol>
+        <li>Qahva</li>
+        <li>CHoy</li>
+        <li>Sharbat</li>
+        <li>Sut</li>
+        <li>Suv</li>
+    </ol>
+
+    <p>Ichimliklar ro'yhatini kiritib, tugmani bosing.</p>
+    <input type="text" id="drinkId" autofocus>
+    <button onclick="setSelectedDrinkI()"> Tanlamoq </button>
+    <p>Sizning tanlavingiz:
+        <label id="drink"></label>
+    </p>
+
+    <script>
+        function setSelectedDrinkI(){
+            let drinkId = document.getElementById("drinkId").value;
+
+            let drElements= document.getElementsByTagName("li");
+            if(drElements[drinkId - 1]  != null)
+                document.getElementById("drink").innerHTML = drElements[drinkId - 1].innerHTML;
+            else 
+                document.getElementById("drink").innerHTML = 'Mavjud bo\'lmagan ichimlik'
+        }
+    </script>
+</body>
+</html>

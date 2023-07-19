@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .greenclass{
+            color: green;
+        }
+    </style>
+</head>
+
+   <body>
+    <h1>Assalomu alaykum</h1>
+
+    <p id="pDescription"> Quyidagi tugma bosilsa, h1 elementiga "class" atributi qoshilib beradi</p>
+
+    <button onclick="setColor()">Meni bosing</button>
+    <button onclick="ChangeStaye(0)"> Meni ham bosing</button>
+
+    <script>
+        function setColor(){
+            let h1Element = document.getElementsByTagName("h1")[0];
+            if(h1Element != null)
+                h1Element.setAttribute("class", "greenclass")
+        }
+        function ChangeStaye(){
+            document.getElementById("pDescription").style.color = "red"
+        }
+    </script>
+  </body>
+
+</html>
