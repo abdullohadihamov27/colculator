@@ -1,0 +1,32 @@
+body{
+    background-color: aqua ;
+
+}
+.phone{
+    background-color: white;
+    width: 25%;
+    float: left;
+    border: 1px solid;
+    border-color: black;
+    padding-left: 50px;
+    margin-left: 50px;
+    height: 580px;
+    margin-top: 30px;
+}
+h2{
+    /* margin-top: 260px; */
+}
+button{
+    margin-top: 70px;
+
+}
+.car{
+     margin-top: 188px;
+}
+.take{
+    margin-top: 155px;
+}
+img{
+    height: 230px;
+
+}
